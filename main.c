@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "vector.h"
+#include "shape.h"
 
 int main() {
     vect a, b;
