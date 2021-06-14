@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <math.h>
 
-#define HEIGHT  20
-#define WIDTH   70
+#define HEIGHT  50
+#define WIDTH   100
 
 char display[HEIGHT][WIDTH];
 
@@ -22,6 +23,13 @@ void show () {
     }
 }
 
-void drawChar (int row, int col, char input) {
-    display[row][col] = input;
+void drawLine (int row1, int col1, int row2, int col2, char infill) {
+    float slope = ((float)(row2 - row1)) / ((float)(col2 - col1));
+    float yIntercept = (float)row1 - slope*(float)col1;
+
+    for (float col = col1; col <= col2; col += 1) {
+        int row = ceil(slope*col + yIntercept);
+
+        display[row][(int)col] = infill;
+    }
 }
