@@ -35,3 +35,25 @@ vect cross (vect a, vect b) {
 float angl (vect a, vect b) {
     return acos(dot(a, b) / (magn(a) * magn(b)));
 }
+
+vect unit (char type) {
+    vect output;
+
+    output.x = 0;
+    output.y = 0;
+    output.z = 0;
+
+    switch (type) {
+        case 'i':
+            output.x = 1;
+            break;
+        case 'j':
+            output.y = 1;
+            break;
+        case 'k':
+            output.z = 1;
+            break;
+    }
+
+    return output;
+}
