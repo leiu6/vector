@@ -32,16 +32,3 @@ int isEquilateral (tri input) {
         return 0;
     }
 }
-
-tri makeEquilateral (vect v1, vect v2) {
-    tri result;
-
-    result.v1 = v1;
-    result.v2 = v2;
-
-    // now we find v3
-
-    
-
-    return result;
-}
