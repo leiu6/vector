@@ -1,10 +1,10 @@
-#include <stdio.h>
 #include <math.h>
 #include "shape.h"
+#include "render.h"
 
 int main() {
-    vect i = unit('k');
+    populate(' ');
+    show();
 
-    printf("%f, %f, %f\n", i.x, i.y, i.z);
     return 0;
 }
